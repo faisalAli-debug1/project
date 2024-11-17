@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar{
+    height: 4rem;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+.right-nav a{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;  
+}
+
+.right-nav a:hover{
+    border-bottom: 1px solid white;
+}
+
+.hamburger{
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width:560px){
+    .right-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 15rem;
+        height: 20rem;
+        background-color: rgb(34, 31, 31);
+        position: absolute;
+        top: 4rem;
+        right: 0rem;
+        display: none;
+    }
+
+    .right-nav a{
+        font-size: 1.5rem;
+        border: 1px solid rgb(34, 31, 31);
+    }
+
+    .hamburger{
+        display: block;
+    }
+}
+
+#check:checked ~ .right-nav{
+    display: flex;  
+}
+
+
+/* Home */
+.home {
+    height: 100vh;
+    background-image: url(./droplets-7401411_640.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    color: white;
+    /* box-shadow: 17px 0px 0px black inset; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.home h2{
+    font-size: 4rem;
+    /* min-width: 3vw; */
+    margin-bottom: 1rem;
+    text-shadow: -5px 5px 10px black;
+}
+
+@media(max-width:558px){
+    .home h2{
+        font-size:2.5rem ;
+    }
+}
+
+.home p{
+    padding: 0 10vw;
+    text-align: center;
+}
+
+/* About */
+.about{
+    padding-top: 4rem;
+    animation: load 1.5s linear forwards;
+     
+}
+
+.about div p{
+    width: 20rem;   
+}
+
+.about div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about img{
+    height: 35vw;
+} 
+
+@keyframes load {
+       from{
+        opacity: 0;
+        transform: translateY(5px);
+       }
+    to{
+       opacity: 1; 
+       transform: translateY(0);    
+    }
+}
+
+@media(max-width:560px){
+    .about div{
+        flex-direction: column;
+    }
+
+    .about .box-1{
+        flex-direction: column-reverse;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Cources */
+.courses{
+    padding-top: 3rem;
+    animation: left-fade 1s linear forwards;
+}
+
+@keyframes left-fade{
+    from{
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.courses > h2{
+    background-color: antiquewhite;
+    padding:2rem;
+    font-size: 3rem;
+    max-width: 100vw;
+    font-weight: 200;
+    text-align: center;
+    /* margin-top: 15rem; */
+}
+
+.courses img{
+    height:  20vw ;
+}
+
+.course-2 img{
+    width: 20vw;
+}
+
+.courses div p{
+    width: 20rem;
+}
+
+.courses div a{
+    text-decoration: none;
+    color: white;
+    background-color: brown;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.courses div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Contact */
+
+.contact{
+    padding-top: 3rem;
+    animation: right-fade 1s linear forwards;
+}
+
+@keyframes right-fade{
+    from{
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.contact h2{
+    background-color: blueviolet;
+    width: 45vw;
+    color: white;
+    padding:1rem;
+    border-radius: 1rem;
+    font-size: 4vw;
+    font-weight: 200;
+    text-align: center;
+    margin: 2vw 0 2vw 30vw;
+
+}
+
+.form-box{
+    width: 20rem;
+    height: 2rem;
+
+}
+
+.complain-box{
+    height: 7rem;
+    color: gray;
+    font-size: 1rem;
+}
+
+.form{
+    width: 400px;
+    height: 25rem;
+    background-color: grey ;
+    border: 1px solid black;
+    border-radius: 3rem 3rem 0 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact img{
+    height: 30vw;
+}
+
+.contact .form-contaner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.foot{
+    background-color: black;
+    height: 10rem;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:740px){
+
+    .courses div{
+        margin-bottom: 5rem;
+    }
+
+    .courses h2{
+        font-size: 5vw;
+        padding: 1rem;
+    }
+
+    .course-1 , .course-3{
+        flex-direction: column;
+    }
+
+    .course-2 , .course-4{
+        flex-direction: column-reverse;
+    }
+
+    .courses div img{
+        margin-bottom: 1.2rem;
+    }
+
+    .courses div p{
+        margin-bottom: 1rem;
+    }
+
+    .contact div{
+        flex-direction: column;
+    }
+
+    .form{
+        margin-top: 2rem;
+        max-width: 80vw;
+    }
+
+    .form-box{
+        max-width:70vw ;
+    }
+
+    .foot{
+        font-size: 1rem;
+    }
+}
+
+
+
